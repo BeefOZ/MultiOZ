@@ -1,0 +1,28 @@
+{
+   "manifest_version": 2,
+   "name": "MultiOZ",
+   "description": "Мультитул бифоз",
+   "version": "0.777",
+   "author": "BeefOZ",
+   "background": {
+      "scripts": ["js/bg.js"]
+   },
+   "browser_action": {
+      "default_icon": "img/B_ico.png",
+      "default_popup": "popup.html",
+      "default_title": "Ты красавчик )0))"
+   },
+   "content_scripts": [ {
+      "css": [ "js/clr/inj.css" ],
+      "js": [ "js/jqmini.js", "js/script.js" ],
+      "matches": [ "*://vk.com/*" ]
+   } ],
+   "icons": {
+      "128": "img/B_ico.png",
+      "256": "img/B_256.png",
+      "32": "img/B_32.png"
+   },
+   
+   "permissions": [ "tabs", "storage", "notifications", "contextMenus", "\u003Call_urls>" ],
+   "short_name": "Сменить Фон.",   "web_accessible_resources": [ "img/*" ]
+}

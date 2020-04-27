@@ -1,0 +1,183 @@
+<link type="text/css" rel="stylesheet" href="/st.css">
+<meta charset="utf-8">
+<script type="text/javascript" src="js/jqmini.js"></script>
+<script type="text/javascript" src="js/opts.js"></script>
+<script type="text/javascript" src="js/popup.js" ></script>
+<script src='js/clr/spectrum.js'></script>
+<link rel="stylesheet" href="popup.css"/>
+<link rel='stylesheet' href='js/clr/spectrum.css' />
+<body>
+	<div id="overlay">
+		<div class="success"></div>
+	</div>
+	<div id="settings">
+		<div id="settings_title"></div>
+		<div class="settings_ul">
+			<div class="settings_border" id="ext_settings stroke_settings">
+				<div class="check_box" id="settingsBox">
+					<div class="checkbox" id="ext_checkBox"></div>
+					<p class="check_tip">Тема ВК</p>
+				</div>
+				<div class="check_box">
+					<div class="checkbox BackImg"></div>
+					<p class="check_tip">Фоновая картинка</p>
+				</div>
+				<div class="check_button openSett" id="backImgSett"></div>
+				<div class="bgScale"></div>
+				<div id="rate1"></div>
+				<div class="check_box half">
+					<div class="checkbox" id="imgPave"></div>
+					<p class="check_tip">Замостить</p>
+				</div>
+				<div class="check_box half right">
+					<div class="checkbox" id="imgCenter"></div>
+					<p class="check_tip">Центр</p>
+				</div>
+				<ul>
+					<div class="check_box">
+						<div class="checkbox head_checkBox"></div>
+						<p class="check_tip">Мод. цвета</p>
+					</div>
+					<div class="check_button openSett" id="colorSett"></div>
+				</ul>
+				<ul>
+					<div class="check_box">
+						<div class="checkbox stroke_checkBox"></div>
+					<p class="check_tip">Модификации</p>
+				</div>
+				<div class="check_button openSett" id="strokeSett"></div>
+				</ul>
+			</div>
+		</div>
+		<div id="buttons">
+			<div class="button save_btn fl_l" id="save">
+				<div class="save"></div>
+			</div>
+			<div class="button fl_r" id="reset">
+				<div class="reset"></div>
+			</div>
+		</div>
+		<div id="rate"></div>
+	</div>
+	<div class="OZBackground OZhidden">
+		<div class= "hidden" id="backImgSettBox">
+			<p id="settBox">Фон</p>
+			<div class="check_box">
+				<div class="checkbox BackImg ButtonSettBox"></div>
+			</div>
+			<p class="Back"></p>
+			<div id="rate2"></div>
+			<div class="settings_border">
+				<div id="imgContent"></div>
+			</div>
+		</div>
+		<div class="hidden" id= "colorSettBox">
+			<p id="settBox">Палитра цветов</p>
+			<div class="check_box">
+				<div class="checkbox head_checkBox ButtonSettBox"></div>
+			</div>
+			<p class="Back"></p>
+			<div id="rate2"></div>
+			<div class="settings_border">
+				<li class="stroke_opacity">
+					<div class="check_box">
+						<div class="checkbox" id="turnHeader"></div>
+						<div id="head_color">
+							<p class="sets">  Цвет шапки</p>
+							<div id="colorPicker">
+								<input type='text' id="header_color">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="stroke_opacity">
+					<div class="check_box">
+						<div class="checkbox" id="turnTouch"></div>
+						<div id="head_color">
+							<p class="sets">  Цвет наведения</p>
+							<div id="colorPicker">
+								<input type='text' id="head_colorTouch">
+							</div>
+						</div>
+					</div>
+				</li>
+				<div id="rate1"></div>
+				<ul>
+				<li class="stroke_opacity">
+					<div class="check_box">
+						<div class="checkbox" id="turnSide"></div>
+						<div id="head_color">
+							<p class="sets">  Боковые меню</p>
+							<div id="colorPicker">
+								<input type='text' id="side_color">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="stroke_opacity">
+					<div>
+						<div class="check_box">
+							<div class="checkbox" id="turnSideOpacity"></div>
+							<p class="sets">  Прозрачность</p>
+						</div>
+						<input id="sideOpacity" type="range" min="1" max="100" step="1" value="100" />
+					</div>
+				</li>
+				</ul>
+				<ul>
+				<li class="stroke_opacity">
+					<div class="check_box">
+						<div class="checkbox" id="turnPage"></div>
+						<div id="head_color">
+							<p class="sets">  Фон страницы</p>
+							<div id="colorPicker">
+								<input type='text' id="pageColor">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="stroke_opacity">
+					<div>
+						<div class="check_box">
+							<div class="checkbox" id="page_opacity_checkBox"></div>
+							<p class="sets">  Прозрачность</p>
+						</div>
+						<input id="page_opacity_slider" type="range" min="1" max="100" step="1" value="100" />
+					</div>
+				</li>
+				</ul>
+			</div>
+		</div>
+		<div class="hidden" id="strokeSettBox">
+			<p id="settBox">Модификации</p>
+			<div class="check_box">
+				<div class="checkbox stroke_checkBox ButtonSettBox"></div>
+			</div>
+			<p class="Back"></p>
+			<div id="rate2"></div>
+			<div class="settings_border">
+				<li class="stroke_opacity">
+					<div id="stroke_color">
+						<p class="sets">Цвет обводки</p>
+						<div id="colorPicker">
+							<input type='text' id="stroke_colorPicker">
+						</div>
+					</div>
+				</li>
+				<li class="stroke_opacity">
+					<div id="stroke_size">
+						<p class="sets">Размер</p>
+						<input id="stroke_size_slider" type="range" min="1" max="50" step="1" value="80"/>
+					</div>
+				</li>
+				<li class="stroke_opacity">
+					<div id="stroke_opacity">
+						<p class="sets">Прозрачность</p>
+						<input id="stroke_opacity_slider" type="range" min="1" max="100" step="1" value="50" />
+					</div>
+				</li>
+				<div id="rate1"></div>
+			</div>
+		</div>	
+	</div>	
+</body>
